@@ -74,7 +74,9 @@ else
 			rsync -avC $EXARG --delete $PREVIEWDIR $STABLEDIR
 			# hack for images for the Markdown plugin
 			rsync -avC ${GIT_SOURCESDIR}markdown/docs/*.png $STABLEDIR
- 			;;
+			# hack for HTML documentation for the GeanyLUA plugin
+			rsync -avC ${GIT_SOURCESDIR}geanylua/docs/*.html $STABLEDIR
+			;;
 		*)
 			echo "Usage: $0 [preview|stable]";
 			;;
